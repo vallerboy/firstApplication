@@ -1,25 +1,26 @@
 package pl.oskarpolak.firstApplication.models.forms;
 
 public class VehicleForm {
-    public String producitionYear;
+    public String productionYear;
     public String mark;
     public String model;
 
 
-    public VehicleForm(String producitionYear, String mark, String model) {
-        this.producitionYear = producitionYear;
+    public VehicleForm(String productionYear, String mark, String model) {
+        this.productionYear = productionYear;
         this.mark = mark;
         this.model = model;
     }
 
     public VehicleForm() { }
 
-    public String getProducitionYear() {
-        return producitionYear;
+
+    public String getProductionYear() {
+        return productionYear;
     }
 
-    public void setProducitionYear(String producitionYear) {
-        this.producitionYear = producitionYear;
+    public void setProductionYear(String productionYear) {
+        this.productionYear = productionYear;
     }
 
     public String getMark() {
