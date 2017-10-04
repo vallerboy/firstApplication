@@ -21,4 +21,10 @@ public class VehicleController {
         model.addAttribute("info", form.getProductionYear());
         return "vehicle";
     }
+    /*
+        Poznanie IF'A w thymeleaf na podstawie roku produkcji (zmiana koloru tekstu)
+        Walidacja formularzy na podstawie JSR-303
+        Internacjonalizacja aplikacji i komunikatów
+        Wstęp do JPA & Hibernate w podejsciu SpringBoot.
+     */
 }
