@@ -1,12 +1,12 @@
 package pl.oskarpolak.firstApplication.models.forms;
 
 public class VehicleForm {
-    public String productionYear;
+    public int productionYear;
     public String mark;
     public String model;
 
 
-    public VehicleForm(String productionYear, String mark, String model) {
+    public VehicleForm(int productionYear, String mark, String model) {
         this.productionYear = productionYear;
         this.mark = mark;
         this.model = model;
@@ -15,11 +15,11 @@ public class VehicleForm {
     public VehicleForm() { }
 
 
-    public String getProductionYear() {
+    public int getProductionYear() {
         return productionYear;
     }
 
-    public void setProductionYear(String productionYear) {
+    public void setProductionYear(int productionYear) {
         this.productionYear = productionYear;
     }
 
