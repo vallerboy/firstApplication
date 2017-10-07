@@ -14,6 +14,9 @@
 
 <br/>
 
+<p th:text="#{hello.message}"></p>
+
+
 <form th:action="@{/vehicle}" method="post" th:object="${vehicleForm}">
     <p th:if="${#fields.hasErrors('mark')}" th:errors="*{mark}"></p>
     Marka: <input type="text" th:field="*{mark}"/><p></p>

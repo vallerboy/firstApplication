@@ -1,5 +1,7 @@
 package pl.oskarpolak.firstApplication.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,12 +11,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import pl.oskarpolak.firstApplication.models.forms.VehicleForm;
 
 import javax.validation.Valid;
+import java.util.Locale;
 
 @Controller
 public class VehicleController {
+
+    @Autowired
+    MessageSource messageSource;
+
     @RequestMapping(value = "/vehicle", method = RequestMethod.GET)
-    public String vehcileGet(Model model){
+    public String vehcileGet(Locale locale, Model model){
         model.addAttribute("vehicleForm", new VehicleForm());
+
+        String s = messageSource.getMessage("hello.message", new Object[]{"Oskar"}, locale);
+
+        System.out.println(s);
         return "vehicle";
     }
 
