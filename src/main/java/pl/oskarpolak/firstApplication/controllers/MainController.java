@@ -12,6 +12,8 @@ import java.util.Random;
 @Controller
 public class MainController {
 
+
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model){
 
