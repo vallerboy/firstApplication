@@ -1,8 +1,20 @@
 package pl.oskarpolak.firstApplication.models.forms;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
 public class VehicleForm {
+    @Min(1900)
+    @Max(2017)
     public int productionYear;
+    @NotBlank
+    @Size(min = 3, max = 30)
     public String mark;
+    @NotBlank
+    @Size(min = 3, max = 50)
     public String model;
 
 

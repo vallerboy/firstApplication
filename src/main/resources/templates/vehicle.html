@@ -13,8 +13,11 @@
 <br/>
 
 <form th:action="@{/vehicle}" method="post" th:object="${vehicleForm}">
+    <p th:if="${#fields.hasErrors('mark')}" th:errors="*{mark}"></p>
     Marka: <input type="text" th:field="*{mark}"/><p></p>
+    <p th:if="${#fields.hasErrors('model')}" th:errors="*{model}"></p>
     Model: <input type="text" th:field="*{model}"/><p></p>
+    <p th:if="${#fields.hasErrors('productionYear')}" th:errors="*{productionYear}"></p>
     Rok produkcji: <input type="text"  th:field="*{productionYear}"/><p></p>
     <input type="submit" value="Wyslij"/>
 </form>
