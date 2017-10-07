@@ -19,6 +19,7 @@ public class VehicleController {
     public String vehcilePost(@ModelAttribute("vehicleForm") VehicleForm form,  Model model){
         // Wyświetlamy tylko i wyłącznie rok produkcji
         model.addAttribute("info", form.getProductionYear());
+        model.addAttribute("infoColor", form.getProductionYear() >= 2000 ? "green" : "red");
         return "vehicle";
     }
     /*

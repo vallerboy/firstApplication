@@ -4,7 +4,11 @@
     <title>Title</title>
 </head>
 <body>
-<center><span th:if="${info gt 2000}" th:text="${info}"></span></center>
+<center>
+    <h1>
+    <span th:text="${info}" th:style="'color: ' + ${infoColor}"></span>
+    </h1>
+</center>
 
 <br/>
 
